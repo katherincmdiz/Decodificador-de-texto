@@ -14,16 +14,15 @@ textarea{
 /*encabezado*/
 .encabezado{
     display: flex;
-    flex-direction: row;
-    /*justify-content: start;*/
     align-items: center;
     gap: 0.2rem;
     padding: 5px;
-    width: 70%; 
+    width: 100%; 
+    height: auto;
 }
 
 .logo{
-    width: 12%;
+    width: 15%;
 }
 
 .titulo{
@@ -37,8 +36,8 @@ textarea{
     margin: auto 40px auto auto;
     display: grid;
     grid-template-columns: 2fr 1fr;
-    /*min-height: calc(100vh - 40px - 72px);*/
-    height: 60%;
+    min-height: calc(100vh - 40px - 72px);
+    /*height: 60%;*/
     align-items:end;
 }
 /*lado left*/
@@ -81,7 +80,7 @@ textarea{
    gap: 24px;
    margin-top: 16px;
    flex-direction: row;
-   /*flex-wrap: wrap;  */
+   flex-wrap: wrap;
 }
 .btn-encriptar, .btn-desencriptar, .btn-copiar{
     border: 1px solid #0A3871;
@@ -188,7 +187,7 @@ textarea{
 .footer{
     background-color: #F3F5FC;
     padding:  5px;
-    height:  10px;
+    height:  15px;
     font-size: 12px;
     font-weight: bold;
     width: 100%;
@@ -199,9 +198,18 @@ textarea{
 }
 
 @media screen and (max-width: 1100px){
+    .encabezado{
+        width: 75%;
+    }
+    .logo{
+        margin-right: 1px;
+    }
 .cifrar{
     flex-direction: column;
     height: 90%;
+}
+.descifra.ajustar{
+    height: 100%;
 }
 .mensajeEncriptado{
     height: 90%;
@@ -212,7 +220,11 @@ textarea{
 @media screen and (max-width: 800px){
     .encabezado{
         text-align: center;
-        grid-template-rows: auto auto;
+        width: 75%;
+        justify-content: space-between;
+    }
+    .logo{
+        width: 30%;
     }
     .titulo{
         font-size: 30px;
@@ -262,8 +274,15 @@ textarea{
 }
 
 @media screen and (max-width: 480px){
+    .encabezado{
+        width: 70%;
+    }
+    .conteiner{
+        width: min-content;
+    }
     .cifrar{
         height: 100%;
+        width: auto;
     }
     .descifra{
         height: 100%;
@@ -281,17 +300,16 @@ textarea{
         height: auto;
     }
     .encabezado{
-        width: auto;
-        flex-direction: row;
-        justify-content: space-between;
-        padding: auto;
+        width: 100%;
+        margin-top: 12px;
+        height: 10%;
     }
     .logo{
-        width: 45%;
+        size:auto;
     }
     .titulo{
-        width: auto;
-        font-size: 35px; 
+        width: 85%;
+        font-size: 25px; 
     }
     .conteiner{
         margin: auto auto;
