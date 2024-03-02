@@ -291,11 +291,11 @@ textarea{
         height: 65%;
     }*/
     
-    .descifra{
+    /*.descifra{
         height: 100%;
-    }
+    }*/
     .mensajeEncriptado{
-        height: auto;
+       /* height: auto;*/
        text-align: center;
     }
 }
