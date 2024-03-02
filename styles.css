@@ -46,7 +46,8 @@ textarea{
     display:flex;
     flex-direction: column;
     justify-content: space-evenly;
-    width: 100%;    
+    width: 100%;  
+    gap: 0.3rem;  
 }
 .ingresoTexto{
     width: 80%;
@@ -322,7 +323,9 @@ textarea{
         margin: auto auto;
     }
     .cifrar{
-        margin:auto
+        margin:auto;
+        gap: 0.3rem;
+        width: 100%;
     }
     .elementos{
         width: 100%;
