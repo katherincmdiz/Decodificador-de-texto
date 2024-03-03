@@ -1,6 +1,10 @@
 const campoTexto = document.querySelector("#ingresoTexto");
 const campoMensaje = document.querySelector("#mensajeEncriptador");
-const matrizCodigo = [["i","imes"],["e", "enter"],["a", "ai"],["o", "ober"],["u", "ufat"]];
+const matrizCodigo = [["i","imes"],
+                     ["u", "ufat"],
+                    ["e", "enter"],
+                    ["a", "ai"],
+                    ["o", "ober"]];
 const validar = /^[a-z ñ\s]+$/;
 
 function btnEncriptar() {
