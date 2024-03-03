@@ -287,10 +287,15 @@ textarea{
     
 }
 @media screen and (max-width: 480px){
+    .elementos{
+        margin-left: 3px;
+        width: 90%;
+    }
     .descifra{
         height: 25%;
         margin-bottom: 5%;
         padding-bottom: 20px;
+        width: 75%;
     }
     
     .btn-copiar{
@@ -298,7 +303,7 @@ textarea{
 }
 }
 
-@media screen and (max-width: 360px){
+@media screen and (max-width: 380px){
     .body{
         width: 100%;
         height: auto;
