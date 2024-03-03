@@ -40,6 +40,7 @@ textarea{
     /*gap: 1rem;*/
     height: 95vh;
     min-height: calc(100vh - 40px - 72px);
+   /* box-sizing: border-box;*/
 }
 /*lado left*/
 .cifrar{
@@ -122,10 +123,10 @@ textarea{
 /*lado right*/
 .descifra{
     background-color: #fcfcfc;
-    height: 100%;
+    height: 95.5%;
     width: 40%;
     border-radius: 32px;
-    padding: 20px 20px 40px 20px;
+    padding: 20px 20px 28px 20px;
     box-sizing: border-box;
     display: flex;
     flex-direction: column;
@@ -187,7 +188,7 @@ textarea{
     transform: scale(1.1);
 } 
 .footer{
-    background-color: #6B5777;
+    background-color: #b18aac;
     padding:  5px;
     height:  15px;
     font-size: 12px;
@@ -195,7 +196,7 @@ textarea{
     width: 100%;
     display: flex;
     justify-content: center;
-    color: rgb(202, 192, 192);  
+    color: #0A3871;;  
     margin-top: 2 rem;   
 }
 
