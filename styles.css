@@ -2,9 +2,9 @@
 body{
     background-color: #F3F5FC;
     font-family:"Lora", serif;
-    display: grid;
+    /*display: grid;*/
     min-height: 100vh;
-    grid-template-rows: auto 1fr auto;
+    /*grid-template-rows: auto 1fr auto;*/
     background: linear-gradient( #faf2fa,#ae8faa );     
 }
 
@@ -34,24 +34,31 @@ textarea{
 .conteiner{
     width: 80.5%;
     margin: auto 40px auto auto;
-    display: grid;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    height: 95vh;
+    min-height: calc(100vh - 40px - 72px);
+    /*padding: 1rem;*/
+    /*display: grid;
     grid-template-columns: 2fr 1fr;
     min-height: calc(100vh - 40px - 72px);
     /*height: 60%;*/
-    align-items:end;
+    /*align-items:end;*/
 }
 /*lado left*/
 .cifrar{
-    height:100%;
     display:flex;
     flex-direction: column;
     justify-content: space-evenly;
-    width: 100%;  
-    gap: 0.3rem;  
+    width: 80%;
+    
+   
 }
 .ingresoTexto{
     width: 80%;
-    height: 50%;
+    height: 60%;
     font-size: 32px;
     color: #0A3871;
     resize: none;
@@ -121,15 +128,15 @@ textarea{
 /*lado right*/
 .descifra{
     background-color: #fcfcfc;
-    height: calc(100% + 48px);
-    width: 100%;
+    height: 100%;
+    width: 40%;
     border-radius: 32px;
     padding: 20px 20px 40px 20px;
     box-sizing: border-box;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    gap: 32px;
+    gap: 30px;
     align-items: center;
     box-shadow: 0px 24px 32px -8px rgba(0,0,0,0.08);
 }
@@ -164,7 +171,8 @@ textarea{
 .mensajeEncriptado.ajustar{
     text-align: left;
     font-weight: lighter;
-    height: 70%;
+    height: 80%;
+    
 }
 .parrafo-mensaje{
     color: #495057;
@@ -185,6 +193,7 @@ textarea{
     transform: scale(1.1);
 } 
 .footer{
+    background-color: #d1b3e2;
     padding:  5px;
     height:  15px;
     font-size: 12px;
@@ -196,24 +205,31 @@ textarea{
     margin-top: 2 rem;   
 }
 
-@media screen and (max-width: 1100px){
-    .encabezado{
-        width: 75%;
+@media screen and (max-width: 1200px) {
+    .conteiner{
+        flex-direction: row;
+        width: 90%;
+        margin: 5%;
     }
-    .logo{
-        margin-right: 1px;
+    .cifrar{
+        height: 90%;
     }
-.cifrar{
-    flex-direction: column;
-    height: 90%;
-}
-.descifra.ajustar{
-    height: 100%;
-}
-.mensajeEncriptado{
-    height: 90%;
-}
-
+    .ingresoTexto{
+        height: 80%;
+    }
+    .botones{
+        flex-direction: row;
+        width: 100%;
+    }
+    .btn-encriptar{
+        width: 45%;
+    }
+    .btn-desencriptar{
+        width: 45%;
+    }
+    .descifra{
+        width: auto;
+    }
 }
 
 @media screen and (max-width: 800px){
@@ -226,25 +242,24 @@ textarea{
         width: 30%;
     }
     .titulo{
-        font-size: 30px;
+        font-size: 40px;
     }
     .conteiner{
-        grid-template-columns:1fr;
-        grid-template-rows: 75% auto;
-        width: auto;
-        margin: auto 40px;
+        flex-direction: column;
+        width: 95%;
+        margin: 1%;  
     }
     .cifrar{
         width: 100%;
+        height: 80%;
         justify-content: space-evenly;
     }
     .ingresoTexto{
         width: 90%;
-        height: 50%;     
+        height: 70%;     
     }
     .elementos{
-        width: auto;
-        /*margin-left: 15px;*/
+        margin-left: 5%;
     }
     .btn-desencriptar{
         height: 100%;
@@ -256,12 +271,8 @@ textarea{
         width: 45%;
     }
     .descifra{
-        height: 90%;
-    }
-    .mensajeEncriptado{
-        text-align: center;
-        width: auto;
-        height: auto;
+        height: 25%;
+        width: 70%;
     }
     .imagenBuscador{
         display: none;
@@ -271,36 +282,6 @@ textarea{
     }
     
 }
-
-
-@media screen and (max-width: 500px){
-    .encabezado{
-        width: 70%;
-    }
-    .conteiner{
-        width: min-content;
-    }
-    .cifrar{
-        height: 100%;
-        width: auto;
-    }
-    .botones{
-        margin-top: 0%;
-        gap: 5px;
-    }
-    /*.btn-desencriptar{
-        height: 65%;
-    }*/
-    
-    /*.descifra{
-        height: 100%;
-    }*/
-    .mensajeEncriptado{
-       /* height: auto;*/
-       text-align: center;
-    }
-}
-
 
 @media screen and (max-width: 360px){
     .body{
@@ -320,18 +301,29 @@ textarea{
         font-size: 25px; 
     }
     .conteiner{
-        margin: auto auto;
+        flex-direction: column;
+        width: 100%;
+        
+        height: 100vh;
+        padding: 1%;
+        margin: auto;
     }
     .cifrar{
-        margin:auto;
-        gap: 0.3rem;
+        height: 70%;
+        align-items: space-betwwen;
+    }
+    .ingresoTexto{
         width: 100%;
+       height: 70%;
+        
     }
     .elementos{
+        margin-left: 4%;
         width: 100%;
         text-align:start;
     }
     .botones{
+        margin-left: 4%;
         width: 100%;
         /*display: block;*/
         justify-content: space-between;   
@@ -341,13 +333,11 @@ textarea{
     } 
     .btn-desencriptar{
         height: 65px;
-        margin-top: 8px;
+        
     }
     .descifra{
         width: 100%;
-        height: auto;
-        margin: auto;
-        padding: 20px;
+        height: 20%;
     }
     .imagenBuscador{
         display: none;
