@@ -1,4 +1,9 @@
 /*agrege color solo para identificar el logo del encabezado*/
+*{
+    box-sizing: border-box;
+}
+
+
 body{
     background-color: #F3F5FC;
     font-family:"Lora", serif;
@@ -364,4 +369,39 @@ textarea{
         height: auto;
     }
     
+}
+@media screen and (min-width: 300px){
+    .encabezado{
+        width: 100%;
+        margin-top: 0px;
+        height: auto;
+    }
+    .logo{
+        width: 18%;
+    }
+    .conteiner{
+        width: 95%;
+    }
+    .cifrar{
+        height: 70%;
+    }
+    .ingresoTexto{
+        height: 100%;
+    }
+    .elementos{
+        margin-left: 0%;
+    }
+    .botones{
+    width: 90%;
+    }
+     .descifra{
+      padding: 1px;
+      height: 28%;
+      padding-bottom: 2px;
+      margin-top: 5px;
+    } 
+     .btn-copiar{
+        width: 90%;
+     }
+
 }

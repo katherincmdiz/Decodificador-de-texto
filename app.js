@@ -1,10 +1,12 @@
 const campoTexto = document.querySelector("#ingresoTexto");
 const campoMensaje = document.querySelector("#mensajeEncriptador");
-const matrizCodigo = [["i","imes"],
-                     ["u", "ufat"],
-                    ["e", "enter"],
-                    ["a", "ai"],
-                    ["o", "ober"]];
+const matrizCodigo = [
+    ["e", "enter"],
+    ["i","imes"],
+    ["a", "ai"],
+    ["u", "ufat"],
+    ["o", "ober"]];
+
 const validar = /^[a-z ñ\s]+$/;
 
 function btnEncriptar() {
@@ -29,7 +31,7 @@ function btnEncriptar() {
     }
 function encriptar(fraseEncriptada){
     for (let i = 0; i < matrizCodigo.length; i++){
-        if (fraseEncriptada.includes(matrizCodigo[i][0])){
+        if (fraseEncriptada.includes(matrizCodigo[i][0])) {
             fraseEncriptada = fraseEncriptada.replaceAll(matrizCodigo[i][0], matrizCodigo[i][1]);
         }
         document.getElementById("ingresoTexto").value = "";
