@@ -4,8 +4,9 @@ const matrizCodigo = [
     ["e", "enter"],
     ["i","imes"],
     ["a", "ai"],
+    ["o", "ober"],
     ["u", "ufat"],
-    ["o", "ober"]];
+    ];
 
 const validar = /^[a-z ñ\s]+$/;
 
@@ -29,16 +30,7 @@ function btnEncriptar() {
         }  
         }
     }
-function encriptar(fraseEncriptada){
-    for (let i = 0; i < matrizCodigo.length; i++){
-        if (fraseEncriptada.includes(matrizCodigo[i][0])) {
-            fraseEncriptada = fraseEncriptada.replaceAll(matrizCodigo[i][0], matrizCodigo[i][1]);
-        }
-        document.getElementById("ingresoTexto").value = "";
-    }
-    cambiosElementos();
-    return fraseEncriptada;
-}
+
 function btnDescencriptar(){
     if (campoTexto.value === "" || campoTexto.length === 0){
         Swal.fire({
@@ -60,10 +52,17 @@ function btnDescencriptar(){
         }
     }
 
-    /*const textoNuevo = descencriptar(campoTexto.value);
-    campoMensaje.value = textoNuevo;*/
 
-
+    function encriptar(fraseEncriptada){
+        for (let i = 0; i < matrizCodigo.length; i++){
+            if (fraseEncriptada.includes(matrizCodigo[i][0])) {
+                fraseEncriptada = fraseEncriptada.replaceAll(matrizCodigo[i][0], matrizCodigo[i][1]);
+            }
+            document.getElementById("ingresoTexto").value = "";
+        }
+        cambiosElementos();
+        return fraseEncriptada;
+    }
 function descencriptar( fraseDescencriptada){
     for (let i = 0; i < matrizCodigo.length; i++){
         if (fraseDescencriptada.includes(matrizCodigo[i][0])){
